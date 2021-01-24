@@ -125,8 +125,8 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
 
+# 로그인/로그아웃 후 이동하는 URL
 LOGIN_REDIRECT_URL = '/'
-
 LOGOUT_REDIRECT_URL = '/'
 
 # 로깅 설정
@@ -148,7 +148,7 @@ LOGGING = {
             'style': '{',
         },
         'standard': {
-            'format': '%(asctime)s [%(levelname)s] %(name)s: %(message)s'
+            'format': '%(asctime)s [%(levelname)s] %(name)s: %(message)s',
         },
     },
     'handlers': {
@@ -165,7 +165,7 @@ LOGGING = {
         'mail_admins': {
             'level': 'ERROR',
             'filters': ['require_debug_false'],
-            'class': 'django.utils.log.AdminEmailHandler'
+            'class': 'django.utils.log.AdminEmailHandler',
         },
         'file': {
             'level': 'INFO',
@@ -191,5 +191,5 @@ LOGGING = {
             'handlers': ['console', 'file'],
             'level': 'INFO',
         },
-    }
+    },
 }

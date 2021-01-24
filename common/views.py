@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
+
 from common.forms import UserForm
 
 
@@ -28,4 +29,4 @@ def page_not_found(request, exception):
     """
     404 Page not found
     """
-    return render(request, 'common/404.html', {})
+    return render(request, 'common/404.html')
